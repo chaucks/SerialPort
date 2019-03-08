@@ -4,11 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-import com.xcoder.serialport.server.IotServer;
 import com.xcoder.serialport.utensil.CommonUtil;
 import com.xcoder.serialport.utensil.PermissionUtil;
-
-import io.vertx.core.Vertx;
 
 import static io.vertx.core.file.impl.FileResolver.CACHE_DIR_BASE_PROP_NAME;
 
@@ -26,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         PermissionUtil.checkStoragePermission(this);
         System.setProperty(CACHE_DIR_BASE_PROP_NAME, CommonUtil.appendExternalStorageDirectory("/sp/vx"));
 
-        Vertx.vertx().deployVerticle(new IotServer());
+//        Vertx.vertx().deployVerticle(new IotServer());
 
         Log.d("Vertx", "startup");
     }
