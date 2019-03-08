@@ -18,7 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <uses-library android:name="com.android.future.usb.accessory" android:required="false" />
+        <uses-library android:name="com.android.future.usb.accessory" android:required="true" />
 
         <activity android:name=".MainActivity">
             <intent-filter>

@@ -11,6 +11,8 @@ import java.io.File;
  */
 public class CommonUtil {
 
+    public static final int DEFAULT_STRING_BUILDER_CAPACITY = 512;
+
     public static final File EXTERNAL_STORAGE_DIRECTORY_FILE = Environment.getExternalStorageDirectory();
 
     public static final String EXTERNAL_STORAGE_DIRECTORY_PATH = EXTERNAL_STORAGE_DIRECTORY_FILE.getPath();
@@ -24,7 +26,7 @@ public class CommonUtil {
      * @return
      */
     public static String appendExternalStorageDirectory(final String... relativePaths) {
-        final StringBuilder builder = new StringBuilder(128);
+        final StringBuilder builder = new StringBuilder(DEFAULT_STRING_BUILDER_CAPACITY);
         builder.append(EXTERNAL_STORAGE_DIRECTORY_ABSOLUTE_PATH);
         for (String path : relativePaths) {
             if (null != path) {
